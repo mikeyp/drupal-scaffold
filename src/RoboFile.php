@@ -115,7 +115,7 @@ class RoboFile extends \Robo\Tasks {
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
     curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 100);
     curl_setopt($ch, CURLOPT_FORBID_REUSE, 1);
-    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
+    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, TRUE);
     curl_setopt($ch, CURLOPT_FILE, $fp);
     $result = curl_exec($ch);
     fclose($fp);
